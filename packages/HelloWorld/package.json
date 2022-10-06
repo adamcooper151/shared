@@ -1,0 +1,27 @@
+{
+  "name": "@adam-deps/helloworld",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "module": "build/index.esm.js",
+  "types": "build/index.d.ts",
+  "license": "MIT",
+  "gitHead": "1cde9b02928ce589669bdc383b90cd1251ef47d0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "clean": "rimraf build && rimraf node_modules && rm tsconfig.tsbuildinfo",
+    "prepack": "yarn rollup",
+    "build": "yarn clean && yarn compile",
+    "watch": "yarn clean && tsc --build -w && cp \"./package.json\" ./dist/",
+    "compile": "tsc --build && cp \"./package.json\" ./dist/",
+    "test": "echo 'no test'",
+    "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings=0",
+    "watchrollup": "rollup -c ../../rollup.config.dev.js -w",
+    "rollup": "rollup -c ../../rollup.config.dev.js"
+  },
+  "dependencies": {
+    "@adam-deps/hello": "^1.0.0",
+    "@adam-deps/world": "^1.0.0"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "baseUrl": "./packages",
+    "paths": {
+      "@adam-deps/hello": ["Hello/src/*"],
+      "@adam-deps/world": ["World/src/*"],
+      "@adam-deps/helloworld": ["HelloWorld/src/*"]
+    }
+  },
+  "files": [],
+  "references": [
+    {
+      "path": "packages/Hello"
+    },
+    {
+      "path": "packages/World"
+    },
+    {
+      "path": "packages/HelloWorld"
+    }
+  ]
+}
