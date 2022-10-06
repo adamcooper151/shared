@@ -1,7 +1,7 @@
 import * as React from "react";
 
 const World: React.FC = () => {
-  return <div>World yo</div>;
+  return <div>World</div>;
 };
 
 export default World;
